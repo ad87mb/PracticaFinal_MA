@@ -1,0 +1,109 @@
+/* Hoja de estilo */
+
+/* Importamos las fuentes que vamos a usar */
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+/*
+font-family: 'Bree Serif', serif;
+font-family: 'Lobster', cursive;
+*/
+
+body{
+	font-family: 'Bree Serif', serif;
+}
+#principal{
+	width: 100%;
+	height: 100%;
+}
+
+/* ---------- CABECERA ---------- */
+header{
+	width: 100%;
+	height: 150px;
+
+	/*Añadimos un fondo con gradiente, controlando el tipo de navegadores que lo soportan*/
+	background: #183976; /* Para los navegadores que NO lo soportan */
+    background: -webkit-linear-gradient(#183976, #C0CDFB); /* Para Safari 5.1 a 6.0 */
+    background: -o-linear-gradient(#183976, #C0CDFB); /* Para Opera 11.1 a 12.0 */
+    background: -moz-linear-gradient(#183976, #C0CDFB); /* Para Firefox 3.6 a 15 */
+    background: linear-gradient(#183976, #C0CDFB); /* Sintaxis estandar */
+
+}
+
+#logo a{
+	background: url(../images/logo.png) no-repeat;
+	text-decoration: none;
+	margin-left: 9px;
+	width: 120px;
+	height: 120px;
+	float: left;
+	/* el z-index se utiliza para que se acople la imagen al contenedor*/
+	z-index: 10;
+	/*Efecto de reflejo*/
+	-webkit-box-reflect: below 0px 
+	-webkit-gradient(linear, left top, left bottom, from(transparent), 
+					color-stop(.8, transparent), to(rgba(0,0,0,2)));
+
+}
+
+#logo a:hover {
+	background: url(../images/logo2.png) no-repeat;
+	-webkit-transform:rotate(-9deg);
+	-moz-transform: rotate(-9deg);
+	-o-transform: rotate(-9deg);
+}
+
+#title{
+	width: 100%;
+	height: 30px;
+	color: #5A3D35;
+	 /*Tipo de letra Lobster importada de Google fonts*/
+    font-family: 'Lobster';
+    font-size: 30px;
+  	/* Sombra del texto */
+  	text-shadow: 0.1em 0.1em 0.2em black;
+  	text-align: center;
+  	margin-top: 10px;
+  	margin-bottom: 10px;
+  	position: absolute;
+  	top: 120px; 
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+/* ---------------Aspectos generales de la calculadora ---------------- */
+.calculadora {
+	padding: 20px;
+	border: 3px blue;
+	width: 250px;
+	text-align: center;
+	background-color: #f6f8d8;
+}
+
+#resultado { 
+	width: 185px;
+	border: 2px black solid;
+	text-align: right;
+	position: relative; left: 23px;
+	padding: 0px 5px;
+	background-color: white;
+	font-family: "courier new";
+	overflow: hidden;
+}
+
+
+/* ---------- Personalizacion del boton ---------- */
+
+/*botones normales: anchura y margen*/
+.calculadora [type=button] { width: 35px; padding: 0;  }
+/*botones especiales*/
+.calculadora input.largo { color: red; width: 60px; }
+
+/* ---------- FOOTER ---------- */
+footer{
+	width: 100%; 
+	height: 100px;
+}
+
+/* ---------- UTILIDADES ---------- */
+.limpiar{clear: both;}
